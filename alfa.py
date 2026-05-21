@@ -1,7 +1,8 @@
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-TOKEN = "8715014666:AAHbjIYeMzcJpzcEADpVEoB6z3-54DDOwKU"  # COLA TEU TOKEN NOVO AQUI
+import os
+TOKEN = os.getenv("TOKEN") 
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
@@ -9,11 +10,11 @@ def start(message):
     nome = message.from_user.first_name
     bot.send_message(message.chat.id, f"Hola {nome}!")
     
-    bot.send_video(message.chat.id, open('1.mp4', 'rb'), 
-                   caption="EN EL MERCADO, LA EMOCIÓN NO DEBE GUIAR TU DECISIÓN. ACTÚA CON ESTRATEGIA, NO CON IMPULSO.")
-    
-    bot.send_photo(message.chat.id, open('2.png', 'rb'), 
-                   caption="OPERA COMO UN ALFA TRADER")
+ # bot.send_video(message.chat.id, open('1.mp4', 'rb'),
+#                caption="EN EL MERCADO, LA EMOCIÓN...")
+
+# bot.send_photo(message.chat.id, open('2.png', 'rb'),
+#                caption="OPERA COMO UN ALFA TRADER")
     
     markup = InlineKeyboardMarkup()
     markup.row_width = 1
