@@ -28,7 +28,7 @@ def start(message):
         InlineKeyboardButton("⚡ ACCESO INMEDIATO ⚡", url="https://alfatrader.online"),
         InlineKeyboardButton("📲 SEGUIR EN INSTAGRAM", url="https://www.instagram.com/ezimagalhaes_trader/"),
         InlineKeyboardButton("🤖 ACTIVAR IA ALFA", url="https://alfatrader.online"),
-        InlineKeyboardButton("🧾 ENVIAR COMPROBANTE", url="https://alfatrader.online")
+        InlineKeyboardButton("🧾 ENVIAR COMPROBANTE", url="https://t.me/alfatraderai")
     )
     
     texto = """📲 ¿CÓMO EMPEZAR?
@@ -41,7 +41,7 @@ def start(message):
 
 Después de activar, usa los botones para:
 🤖 Activar tu IA
-🧾 Enviar tu comprobante
+🧾 Enviar tu comprobante a @alfatraderai
 📲 Seguir resultados en Instagram
 
 Desarrollé esta IA para mejorar nuestras operaciones y buscar rentabilidad. Estamos aquí para ayudarte... 🤝"""
@@ -80,7 +80,7 @@ Activa aquí: https://alfatrader.online""")
 
 1. Ve a: https://alfatrader.online
 2. Haz el pago de 13$ USD
-3. Envía tu comprobante en la misma página
+3. Envía tu comprobante a: @alfatraderai
 
 Rápido, seguro y sin complicaciones 🚀""")
         
@@ -128,6 +128,8 @@ Primero activa tu acceso: https://alfatrader.online""")
 
 Para activar tu IA ve directo a:
 https://alfatrader.online
+
+Para enviar comprobante: @alfatraderai
 
 O usa /start para ver el menú principal.""")
 
