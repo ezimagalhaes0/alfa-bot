@@ -1,8 +1,8 @@
 import telebot
+import os
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-import os
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.environ.get('TOKEN')  # Pega do Railway
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
@@ -10,11 +10,17 @@ def start(message):
     nome = message.from_user.first_name
     bot.send_message(message.chat.id, f"Hola {nome}!")
     
- # bot.send_video(message.chat.id, open('1.mp4', 'rb'),
-#                caption="EN EL MERCADO, LA EMOCIÓN...")
-
-# bot.send_photo(message.chat.id, open('2.png', 'rb'),
-#                caption="OPERA COMO UN ALFA TRADER")
+    try:
+        bot.send_video(message.chat.id, open('1.mp4', 'rb'), 
+                       caption="EN EL MERCADO, LA EMOCIÓN NO DEBE GUIAR TU DECISIÓN. ACTÚA CON ESTRATEGIA, NO CON IMPULSO.")
+    except:
+        pass  # Se não achar o vídeo, pula
+    
+    try:
+        bot.send_photo(message.chat.id, open('2.png', 'rb'), 
+                       caption="OPERA COMO UN ALFA TRADER")
+    except:
+        pass  # Se não achar a foto, pula
     
     markup = InlineKeyboardMarkup()
     markup.row_width = 1
@@ -100,7 +106,6 @@ La IA hace el análisis por ti. Tú solo copias y pegas la señal 📲""")
         
     elif "dinero" in texto or "capital" in texto or "empezar" in texto or "50" in texto or "100" in texto:
         bot.reply_to(message, """💰 La mayoría de los Alfas empiezan con 50 a 100 USD por día.
-
 
 🎁 BONUS: Usa el código 50START en tu primer depósito en Pocket y gana 50% extra si depositas desde 50 USD.""")
         
