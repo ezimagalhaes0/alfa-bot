@@ -12,7 +12,7 @@ def start(message):
     
     try:
         bot.send_video(message.chat.id, open('1.mp4', 'rb'), 
-                       caption="EN EL MERCADO, LA EMOCIÓN NO DEBE GUIAR TU DECISIÓN. ACTÚA CON ESTRATEGIA, NO CON IMPULSO.")
+                       caption="Mira este video de como funciona!")
     except:
         pass
     
