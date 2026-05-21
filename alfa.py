@@ -17,7 +17,7 @@ def start(message):
         pass  # Se não achar o vídeo, pula
     
     try:
-        bot.send_photo(message.chat.id, open('2.png', 'rb'), 
+        bot.send_photo(message.chat.id, open('2.jpg', 'rb'), 
                        caption="OPERA COMO UN ALFA TRADER")
     except:
         pass  # Se não achar a foto, pula
