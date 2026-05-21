@@ -14,29 +14,19 @@ def start(message):
         bot.send_video(message.chat.id, open('1.mp4', 'rb'), 
                        caption="EN EL MERCADO, LA EMOCIÓN NO DEBE GUIAR TU DECISIÓN. ACTÚA CON ESTRATEGIA, NO CON IMPULSO.")
     except:
-        pass  # Se não achar o vídeo, pula
+        pass
     
     try:
         bot.send_photo(message.chat.id, open('2.jpg', 'rb'), 
-                       caption="¡Hola! Soy Ezi Magalhães, Trader Profesional._🚀
-Ayudo a personas como tú a generar ingresos diarios seguros con Alfa Trader, nuestra IA que te envía señales precisas para operar 📈🤖
-
-💰 Muchos ya están ganando entre 20 y 30 dólares al día... ¡sin experiencia previa!
-📲 ¿Quieres unirte?
-1. Entra en alfatrader.online
-2. Espera 3 segundos y Ve a ACCESO INMEDIATO
-3. Confirma tu Activación!
-¡Listo! Estás con nosotros 📈
-
-Desarrollé una IA para mejorar nuestras operaciones y buscar rentabilidad. Sé que es difícil lograrla, pero estamos aquí para ayudarte... 🤝")
+                       caption="¡Hola! Soy Ezi Magalhães, Trader Profesional. 🚀\nAyudo a personas como tú a generar ingresos diarios seguros con Alfa Trader, nuestra IA que te envía señales precisas para operar 📈🤖\n\n💰 Muchos ya están ganando entre 20 y 30 dólares al día... ¡sin experiencia previa!\n📲 ¿Quieres unirte?\n1. Entra en alfatrader.online\n2. Espera 3 segundos y Ve a ACCESO INMEDIATO\n3. Confirma tu Activación!\n¡Listo! Estás con nosotros 📈\n\nDesarrollé una IA para mejorar nuestras operaciones y buscar rentabilidad. Sé que es difícil lograrla, pero estamos aquí para ayudarte... 🤝")
     except:
-        pass  # Se não achar a foto, pula
+        pass
     
     markup = InlineKeyboardMarkup()
     markup.row_width = 1
     markup.add(
-        InlineKeyboardButton("🔥 INICIAR AHORA 🔥", url="https://wa.me/556792353335?text=Quiero%20ser%20un%20ALFA%20Trader"),
-        InlineKeyboardButton("📲 SEGUIR EN INSTAGRAM", url="https://www.instagram.com/alfa.trader/")
+        InlineKeyboardButton("🔥 INICIAR AHORA 🔥", url="https://wa.me/595983981838?text=Quiero%20ser%20un%20ALFA%20Trader"),
+        InlineKeyboardButton("📲 SEGUIR EN INSTAGRAM", url="https://www.instagram.com/ezimagalhaes_trader/")
     )
     
     texto = """Te invito cordialmente a seguir nuestras plataformas oficiales donde compartimos contenido sobre trading, resultados reales y mucho más 📊💰
@@ -46,7 +36,7 @@ Desarrollé una IA para mejorar nuestras operaciones y buscar rentabilidad. Sé 
 ¡Es 100% gratis y te mantiene al día con todo lo que hacemos! ⚡
 
 📸 También sígueme en Instagram:
-👉https://www.instagram.com/ezimagalhaes_trader?igsh=bTR4YmwzNTc5dWJm
+👉https://www.instagram.com/ezimagalhaes_trader
 Ahí mostramos resultados, tips, estrategias y mucho más 🔥
 
 ¡Te espero por allá para seguir creciendo juntos! 💪🚀"""
@@ -94,7 +84,7 @@ Incluye señales diarias + soporte + actualizaciones.
 
 Rápido, seguro y sin complicaciones 🚀
 
-¿Listo para activar? Escríbeme: https://wa.me/556792353335?text=Quiero%20activar%20ALFA""")
+¿Listo para activar? Escríbeme: https://wa.me/595983981838?text=Quiero%20activar%20ALFA""")
         
     elif "país" in texto or "pais" in texto or "argentina" in texto or "mexico" in texto or "colombia" in texto:
         bot.reply_to(message, """🌎 ¡SÍ! Funciona en TODOS los países.
