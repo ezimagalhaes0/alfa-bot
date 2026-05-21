@@ -18,7 +18,17 @@ def start(message):
     
     try:
         bot.send_photo(message.chat.id, open('2.jpg', 'rb'), 
-                       caption="OPERA COMO UN ALFA TRADER")
+                       caption="¡Hola! Soy Ezi Magalhães, Trader Profesional._🚀
+Ayudo a personas como tú a generar ingresos diarios seguros con Alfa Trader, nuestra IA que te envía señales precisas para operar 📈🤖
+
+💰 Muchos ya están ganando entre 20 y 30 dólares al día... ¡sin experiencia previa!
+📲 ¿Quieres unirte?
+1. Entra en alfatrader.online
+2. Espera 3 segundos y Ve a ACCESO INMEDIATO
+3. Confirma tu Activación!
+¡Listo! Estás con nosotros 📈
+
+Desarrollé una IA para mejorar nuestras operaciones y buscar rentabilidad. Sé que es difícil lograrla, pero estamos aquí para ayudarte... 🤝")
     except:
         pass  # Se não achar a foto, pula
     
