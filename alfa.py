@@ -39,17 +39,17 @@ Desarrollé una IA para mejorar nuestras operaciones y buscar rentabilidad. Sé 
         InlineKeyboardButton("📲 SEGUIR EN INSTAGRAM", url="https://www.instagram.com/alfa.trader/")
     )
     
-    texto = """SOY EZI MAGALHÃES, TRADER Y CREADOR DE ALFA.
-CREÉ ESTA COMUNIDAD PORQUE SÉ LO QUE ES EMPEZAR SIN APOYO.
+    texto = """Te invito cordialmente a seguir nuestras plataformas oficiales donde compartimos contenido sobre trading, resultados reales y mucho más 📊💰
 
-HOY, ALFA YA ESTÁ CAMBIANDO VIDAS EN VARIOS PAÍSES.
-CON SEÑALES PRECISAS, TIPS PODEROSOS Y ACOMPAÑAMIENTO REAL, NUESTROS MIEMBROS ESTÁN CONQUISTANDO RESULTADOS DE VERDAD.
+🔗 Síguenos en nuestro segundo canal de WhatsApp:
+👉https://whatsapp.com/channel/0029Vb3es2MHbFVD3hBjkw44
+¡Es 100% gratis y te mantiene al día con todo lo que hacemos! ⚡
 
-¿QUIERES DAR EL PRÓXIMO PASO?
+📸 También sígueme en Instagram:
+👉https://www.instagram.com/ezimagalhaes_trader?igsh=bTR4YmwzNTc5dWJm
+Ahí mostramos resultados, tips, estrategias y mucho más 🔥
 
-ESTOY LISTO PARA AYUDARTE A ENTRAR CON ESTRATEGIA Y SEGURIDAD.
-
-¡VAMOS A CRECER JUNTOS! 🚀"""
+¡Te espero por allá para seguir creciendo juntos! 💪🚀"""
     
     bot.send_message(message.chat.id, texto, reply_markup=markup)
 
